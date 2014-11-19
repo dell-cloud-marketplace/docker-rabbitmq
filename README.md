@@ -14,7 +14,7 @@ Ubuntu          | Trusty                    | Operating system
 
 ## Usage
 
-### 1. Start the Container
+### Start the Container
 
 #### A. Basic Usage
 
