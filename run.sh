@@ -5,5 +5,6 @@ fi
 
 # make rabbit own its own files
 chown -R rabbitmq:rabbitmq /var/lib/rabbitmq
-
+chown -R rabbitmq:rabbitmq /var/log/rabbitmq
+ 
 exec /usr/sbin/rabbitmq-server

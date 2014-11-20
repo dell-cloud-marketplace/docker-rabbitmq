@@ -16,5 +16,8 @@ ADD run.sh /run.sh
 ADD set_rabbitmq_password.sh /set_rabbitmq_password.sh
 RUN chmod 755 ./*.sh
 
+# Logs and Mnesia volumes
+VOLUME ["/var/log/rabbitmq","/var/lib/rabbitmq"]
+
 EXPOSE 5672 15672
 CMD ["/run.sh"]
