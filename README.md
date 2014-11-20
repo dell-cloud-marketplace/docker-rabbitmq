@@ -60,12 +60,14 @@ Start your container with:
 * A predefined password for the RabbitMQ **admin** user by setting the environment variable `RABBITMQ_PASS`
 * Two volumes (which will survive a restart or recreation of the container). The RabbitMQ directory is available in **/var/lib/rabbitmq** on the host. The logs files are available in **/var/log/rabbitmq** on the host.
 
-	sudo docker run -d -p 5672:5672 \
-		-p 15672:15672 \
-		-e RABBITMQ_PASS="mypass" \
-		-v /var/log/rabbitmq:/var/log/rabbitmq \
-		-v /var/lib/rabbitmq:/var/lib/rabbitmq \
-		--name rabbitmq dell/rabbitmq
+```no-highlight
+sudo docker run -d -p 5672:5672 \
+	-p 15672:15672 \
+	-e RABBITMQ_PASS="mypass" \
+	-v /var/log/rabbitmq:/var/log/rabbitmq \
+	-v /var/lib/rabbitmq:/var/lib/rabbitmq \
+	--name rabbitmq dell/rabbitmq
+```
 
 You can now test your new RabbitMQ admin password:
 
