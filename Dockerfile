@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER Dell Cloud Market Place <Cloud_Marketplace@dell.com>
 
-#Install RabbitMQ
+# Install RabbitMQ
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F7B8CEA6056E8E56 
 RUN echo "deb http://www.rabbitmq.com/debian/ testing main" >> /etc/apt/sources.list
 RUN apt-get update

@@ -3,7 +3,7 @@ if [ ! -f /.rabbitmq_password_set ]; then
 	/set_rabbitmq_password.sh
 fi
 
-# make rabbit own its own files
+# Make rabbitmq own its own files
 chown -R rabbitmq:rabbitmq /var/lib/rabbitmq
 chown -R rabbitmq:rabbitmq /var/log/rabbitmq
  
