@@ -1,7 +1,7 @@
 docker-rabbitmq
 =====================
 
-[RabbitMQ](http://www.rabbitmq.com/) is a complete and highly reliable enterprise messaging system based on the emerging AMQP standard.
+This image installs [RabbitMQ](http://www.rabbitmq.com/), a complete and highly reliable enterprise messaging system based on the emerging AMQP standard.
 
 ## Components
 
