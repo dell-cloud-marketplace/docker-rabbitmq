@@ -73,6 +73,12 @@ You can now test your new RabbitMQ admin password:
 
         curl --user admin:mypass http://localhost:5672/api/vhosts
 
+
+### Getting Started
+To start sending and receiving messages through RabbitMQ, refer to the RabbitMQ starting guide: 
+[http://www.rabbitmq.com/getstarted.html](http://www.rabbitmq.com/getstarted.html)
+
+
 ## Reference
 
 ### Image Details
