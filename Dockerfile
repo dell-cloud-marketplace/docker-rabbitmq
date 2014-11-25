@@ -19,5 +19,6 @@ RUN chmod 755 ./*.sh
 # Logs and Mnesia volumes
 VOLUME ["/var/log/rabbitmq","/var/lib/rabbitmq"]
 
+# Expose RabbitMQ and RabbitMG management console ports
 EXPOSE 5672 15672
 CMD ["/run.sh"]
