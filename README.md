@@ -1,7 +1,7 @@
 docker-rabbitmq
 =====================
 
-[RabbitMQ](http://www.rabbitmq.com/) is a complete and highly reliable enterprise messaging system based on the emerging AMQP standard.
+This image installs [RabbitMQ](http://www.rabbitmq.com/), a complete and highly reliable enterprise messaging system based on the emerging AMQP standard.
 
 ## Components
 
@@ -72,6 +72,18 @@ sudo docker run -d -p 5672:5672 \
 You can now test your new RabbitMQ admin password:
 
         curl --user admin:mypass http://localhost:5672/api/vhosts
+
+
+### Management console
+
+The RabbitMQ management console can be accessed by the below URL. Enter the **admin** credentials retrieved from the docker logs.
+
+    http://127.0.0.1:15672     
+
+### Getting Started
+To start sending and receiving messages through RabbitMQ, refer to the RabbitMQ starting guide: 
+[http://www.rabbitmq.com/getstarted.html](http://www.rabbitmq.com/getstarted.html)
+
 
 ## Reference
 
