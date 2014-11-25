@@ -78,7 +78,7 @@ You can now test your new RabbitMQ admin password:
 
 The RabbitMQ management console can be accessed by the below URL. Enter the **admin** credentials retrieved from the docker logs.
 
-    http:<ip_address>:15672     
+    http://<ip_address>:15672     
 
 ### Getting Started
 To start sending and receiving messages through RabbitMQ, refer to the RabbitMQ starting guide: 
