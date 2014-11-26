@@ -9,7 +9,7 @@ The stack comprises the following components:
 
 Name            | Version                   | Description
 ----------------|---------------------------|------------------------------
-RabbitMQ Server | 3.4.1                     | Enterprise messaging system
+RabbitMQ Server | 3.4.2                     | Enterprise messaging system
 Ubuntu          | Trusty                    | Operating system
 
 ## Usage
