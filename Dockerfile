@@ -10,9 +10,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F7B8CEA6056E8E56 &&
     >> /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y rabbitmq-server=3.4.2-1 pwgen && \
-    service rabbitmq-server start && \
-    rabbitmq-plugins enable rabbitmq_management && \
-    service rabbitmq-server restart
+    rabbitmq-plugins enable rabbitmq_management
 
 # Add RabbitMQ startup scripts
 ADD run.sh /run.sh
