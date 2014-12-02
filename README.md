@@ -1,5 +1,4 @@
-docker-rabbitmq
-=====================
+# docker-rabbitmq
 
 This image installs [RabbitMQ](http://www.rabbitmq.com/), a complete and highly reliable enterprise messaging system based on the emerging AMQP standard.
 
@@ -7,10 +6,10 @@ This image installs [RabbitMQ](http://www.rabbitmq.com/), a complete and highly 
 
 The stack comprises the following components:
 
-Name            | Version                   | Description
-----------------|---------------------------|------------------------------
-RabbitMQ Server | 3.4.2                     | Enterprise messaging system
-Ubuntu          | Trusty                    | Operating system
+Name            | Version | Description
+----------------|---------|------------------------------
+RabbitMQ Server | 3.4.2   | Enterprise messaging system
+Ubuntu          | Trusty  | Operating system
 
 ## Usage
 
@@ -27,29 +26,36 @@ As follows:
 
 Run the following command to start rabbitmq:
 
-	sudo docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq dell/rabbitmq
+```no-highlight
+sudo docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq dell/rabbitmq
+```
 
 The first time that you run your container, a new random password will be set for the Rabbit administrator user **admin**.
 To get the password, check the logs of the container by running:
 
-	docker logs rabbitmq
+```no-highlight
+docker logs rabbitmq
+```
 
 You will see an output like the following:
 
-	========================================================================
-	You can now connect to this RabbitMQ server using, for example:
+```no-highlight
+========================================================================
+You can now connect to this RabbitMQ server using, for example:
 
-            curl --user admin:5elsT6KtjrqV  http://<host>:<port>/api/vhosts
+    curl --user admin:5elsT6KtjrqV  http://<host>:<port>/api/vhosts
 
-	Please remember to change the above password as soon as possible!
-	========================================================================
+Please remember to change the above password as soon as possible!
+========================================================================
+```
 
-In this case, `5elsT6KtjrqV` is the password set. 
+In this case, `5elsT6KtjrqV` is the admin password. 
+
 You can then connect to RabbitMQ:
 
-        curl --user admin:5elsT6KtjrqV http://localhost:5672/api/vhosts
-
-Done!
+```no-highlight
+curl --user admin:5elsT6KtjrqV http://localhost:5672/api/vhosts
+```
 
 #### B. Advanced Usage
 
@@ -71,24 +77,26 @@ sudo docker run -d -p 5672:5672 \
 
 You can now test your new RabbitMQ admin password:
 
-        curl --user admin:mypass http://localhost:5672/api/vhosts
+```no-highlight
+curl --user admin:mypass http://localhost:5672/api/vhosts
+```
 
-
-### Management console
+### Management Console
 
 The RabbitMQ management console can be accessed by the below URL. Enter the **admin** credentials retrieved from the docker logs.
 
-    http://127.0.0.1:15672     
+```no-highlight
+http://127.0.0.1:15672     
+```
 
 ### Getting Started
 To start sending and receiving messages through RabbitMQ, refer to the RabbitMQ starting guide: 
 [http://www.rabbitmq.com/getstarted.html](http://www.rabbitmq.com/getstarted.html)
 
-
 ## Reference
 
 ### Image Details
 
-Inspired by [tutumcloud/tutum-docker-rabbitmq](https://github.com/tutumcloud/tutum-docker-rabbitmq)
+Based on [tutumcloud/tutum-docker-rabbitmq](https://github.com/tutumcloud/tutum-docker-rabbitmq)
 
 Pre-built Image | [https://registry.hub.docker.com/u/dell/rabbitmq](https://registry.hub.docker.com/u/dell/rabbitmq) 
