@@ -37,7 +37,7 @@ To get the password, check the logs of the container by running:
 docker logs rabbitmq
 ```
 
-You will see an output like the following:
+You will see output like the following:
 
 ```no-highlight
 ========================================================================
