@@ -9,7 +9,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F7B8CEA6056E8E56 &&
     echo "deb http://www.rabbitmq.com/debian/ testing main" \
     >> /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install -y rabbitmq-server=3.4.2-1 pwgen && \
+    apt-get install -y rabbitmq-server pwgen && \
     rabbitmq-plugins enable rabbitmq_management
 
 # Add RabbitMQ startup scripts
@@ -19,6 +19,10 @@ RUN chmod 755 ./*.sh
 
 # Expose logs and Mnesia volumes
 VOLUME ["/var/log/rabbitmq","/var/lib/rabbitmq"]
+
+# Environmental variables
+ENV RABBITMQ_PASS ""
+ENV RABBITMQ_USER admin
 
 # Expose RabbitMQ and RabbitMG management console ports
 EXPOSE 5672 15672
