@@ -118,6 +118,13 @@ For more details on sending and receiving messages through RabbitMQ, please refe
 
 ## Reference
 
+### Environmental Variables
+
+Variable      | Default  | Description
+--------------|----------|-----------------------------
+RABBITMQ_USER | admin    | Name of the default user
+RABBITMQ_PASS | *random* | Password of the default user
+
 ### Image Details
 
 Based on [tutumcloud/tutum-docker-rabbitmq](https://github.com/tutumcloud/tutum-docker-rabbitmq)
